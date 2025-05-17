@@ -1,0 +1,47 @@
+:root {
+    color-scheme: light dark;
+}
+
+html {
+    scroll-behavior: smooth;
+    display: grid;
+    height: 100%;
+    align-content: center;
+}
+
+body {
+    --color: black;
+    --color-inverted: white;
+    background-color: var(--color-inverted);
+
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    display: grid;
+}
+
+main > div.index {
+    margin: auto;
+}
+
+:target {
+    animation: highlight 3s ease;
+}
+
+@keyframes highlight {
+    0% {
+        color: aqua;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --color: white;
+        --color-inverted: #0d1117;
+    }
+
+    a {
+        color: deepskyblue;
+    }
+}
